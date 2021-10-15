@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+dist/
+coverage/
+.env
+.eslintrc
+build/
+public/
+tsconfig.json
+tsconfig.tsbuildinfo

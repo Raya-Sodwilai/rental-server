@@ -1,0 +1,41 @@
+{
+  "name": "rental-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./scripts/start.js",
+    "build": "npm run clean && npm run compile:source && cp -R ./public ./build/public",
+    "compile:source": "tsc --build tsconfig.json",
+    "clean": "rimraf ./build && rimraf ./tsconfig.tsbuildinfo && rimraf ./reports",
+    "lint:source": "eslint src -f html -o ./reports/eslint.html --ext .ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/body-parser": "^1.19.1",
+    "@types/glob": "^7.1.4",
+    "@typescript-eslint/eslint-plugin": "^4.28.5",
+    "@typescript-eslint/parser": "^4.28.5",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "copyfiles": "^2.4.1",
+    "cors": "^2.8.5",
+    "eslint": "^7.32.0",
+    "express": "^4.17.1",
+    "express-asyncify": "^1.0.1",
+    "express-fileupload": "^1.2.1",
+    "express-session": "1.17.2",
+    "glob": "^7.1.7",
+    "mysql": "^2.18.1",
+    "rimraf": "^3.0.2",
+    "source-map-support": "^0.5.19",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "^16.4.8"
+  }
+}
